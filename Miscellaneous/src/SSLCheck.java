@@ -15,6 +15,7 @@ public class SSLCheck {
 		ChromeOptions options = new ChromeOptions();
 		
 //		Old School Methods :)
+
 /*		c.setCapaSbility(CapabilityType.ACCEPT_INSECURE_CERTS, true);
 		c.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);*/
 		
@@ -22,7 +23,7 @@ public class SSLCheck {
 		
 //		How to Set Proxy
 		Proxy proxy = new Proxy();
-		proxy.setHttpProxy("localhost:8080");
+		proxy.setHttpProxy("localhost:8080"); //value
 		options.setCapability("proxy", proxy);
 		
 //		to block pop-ups
@@ -38,6 +39,6 @@ public class SSLCheck {
 //		Launching the URL
 		driver.get("https://expired.badssl.com/");
 		System.out.println("The page title is : " +driver.getTitle());
-//		driver.close();
+		driver.close();
 	}
 }
